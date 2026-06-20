@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT BOMBAY TECHFEST | Cyborg Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-text">INITIALIZING IITB TECHFEST NEXUS...<span class="cursor">_</span></div>
+    </div>
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-outline"></div>
+    <canvas id="cyber-bg"></canvas>
+    <div class="crazy-robot"></div>
+    <div class="bg-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="glow-bg"></div>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text glitch" data-text="TECHFEST">TECHFEST</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#modules">Upgrades</a></li>
+            <li><a href="#specs">Specs</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn">NEON MODE</button>
+            <button class="nav-cta">Initialize</button>
+        </div>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-content reveal">
+                <p class="subtitle">[ SYSTEM OVERRIDE INITIATED ]</p>
+                <h1 class="glitch-title" data-text="IIT BOMBAY TECHFEST">IIT BOMBAY TECHFEST</h1>
+                <p class="hero-desc">Experience the ultimate convergence of human intelligence and cybernetic engineering. Step into the future.</p>
+                <div class="hero-actions">
+                    <button class="primary-btn glitch-btn">
+                        <span class="btn-text">ENTER NEXUS</span>
+                        <span class="btn-glitch"></span>
+                    </button>
+                    <button class="secondary-btn">VIEW PROTOCOLS</button>
+                </div>
+            </div>
+        </section>
+        <section id="modules" class="upgrades">
+            <h2 class="section-title reveal">Cybernetic <span class="text-cyan">Upgrades</span></h2>
+            <div class="grid-container">
+                <div class="card glass tilt-card reveal">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                    </div>
+                    <h3>Neural Link</h3>
+                    <p>Direct brain-to-machine interface for instantaneous data transfer and processing capability enhancement.</p>
+                    <div class="tech-bar"><div class="fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="card glass tilt-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-icon magenta-glow">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3>Kinetic Overdrive</h3>
+                    <p>Bionic muscular augmentation delivering superhuman agility, speed, and raw kinetic output.</p>
+                    <div class="tech-bar"><div class="fill" style="width: 92%;"></div></div>
+                </div>
+                <div class="card glass tilt-card reveal" style="transition-delay: 0.2s;">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                    </div>
+                    <h3>Optical Array</h3>
+                    <p>Multi-spectrum visual sensors allowing IR, UV, and deep-space telemetry perception.</p>
+                    <div class="tech-bar"><div class="fill" style="width: 78%;"></div></div>
+                </div>
+            </div>
+        </section>
+        <section id="specs" class="specs-section">
+            <div class="specs-content glass reveal">
+                <h2 class="section-title">System <span class="text-magenta">Diagnostics</span></h2>
+                <div class="hud-dashboard">
+                    <div class="warning-banner">
+                        <span class="warning-text">âš  CORE TEMPERATURE CRITICAL // OVERRIDE REQUIRED âš </span>
+                    </div>
+                    <div class="hud-grid">
+                        <div class="hud-panel data-stream-container">
+                            <div class="panel-header">RAW_DATA_FEED</div>
+                            <div class="data-stream" id="data-stream"></div>
+                        </div>
+                        <div class="hud-panel radar-container">
+                            <div class="radar">
+                                <div class="radar-sweep"></div>
+                                <div class="radar-ring r1"></div>
+                                <div class="radar-ring r2"></div>
+                                <div class="radar-ring r3"></div>
+                                <div class="radar-dot"></div>
+                                <div class="radar-dot dot2"></div>
+                            </div>
+                            <div class="hud-value" id="sync-value">98.4%</div>
+                            <div class="hud-label">SYNCHRONIZATION</div>
+                        </div>
+                        <div class="hud-panel stats-container">
+                            <div class="stat-bar">
+                                <label>NEURAL LOAD [TB/s]</label>
+                                <div class="bar-bg"><div class="bar-fill cyan-fill hud-animate" data-width="85%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <label>KINETIC OUTPUT</label>
+                                <div class="bar-bg"><div class="bar-fill magenta-fill hud-animate" data-width="92%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <label>EXALLOCATED MEM</label>
+                                <div class="bar-bg"><div class="bar-fill cyan-fill hud-animate" data-width="65%"></div></div>
+                            </div>
+                            <div class="stat-bar warning-bar">
+                                <label class="text-magenta">SYSTEM HEAT LEVEL</label>
+                                <div class="bar-bg"><div class="bar-fill red-fill hud-animate" data-width="99%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 IIT Bombay Techfest. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Security Protocol</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
